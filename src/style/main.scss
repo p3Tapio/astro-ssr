@@ -1,5 +1,19 @@
-@use "./variables.scss" as *;
+@use "style/variables.scss" as *;
+@use "@picocss/pico/scss/pico" with (
+  $theme-color: "slate"
+);
 
 body {
   color: $text-color;
+  height: 100vh;
+  margin: 0;
+  width: 100vw;
+}
+
+:root {
+  --hover-brightness: 1.2;
+
+  @media (prefers-color-scheme: light) {
+    --hover-brightness: 0.8;
+  }
 }

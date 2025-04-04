@@ -7,5 +7,15 @@ $text-color: #2ecc71;;
 $spacing-small: 8px;
 $spacing-medium: 16px;
 $spacing-large: 24px;
+$spacing-xlarge: 32px;
+$spacing-xxlarge: 40px;
+$spacing-xxxlarge: 48px;
 
-// Borders
+
+// Breakpoints
+$breakpoint-xs: 480px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-xxl: 1536px;

@@ -1,0 +1,75 @@
+@use "style/variables.scss" as *;
+
+.nav {
+  padding: 0 $spacing-small;
+  height: 50px;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    padding: $spacing-small 0;
+    margin-right: $spacing-small;
+
+    a {
+      font-weight: 400;
+      text-decoration: none;
+
+      &:hover {
+        filter: brightness(var(--hover-brightness));
+      }
+    }
+
+    &:first-of-type {
+      margin-left: $spacing-medium;
+    }
+
+    &::after {
+      content: "|";
+      color: var(--pico-primary);
+      margin-left: $spacing-small;
+      font-weight: 500;
+    }
+
+    &:last-of-type::after {
+      content: "";
+    }
+
+    &.active a {
+      font-weight: 700;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-sm) {
+    height: 60px;
+
+    &__item {
+      margin-right: $spacing-medium;
+
+      &::after {
+        margin-left: $spacing-medium;
+      }
+    }
+
+    &__item:first-of-type {
+      margin-left: $spacing-large;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    &__item:first-of-type {
+      margin-left: $spacing-xxlarge;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-lg) {
+    &__item:first-of-type {
+      margin-left: $spacing-xxxlarge;
+    }
+  }
+}

@@ -1,7 +1,8 @@
 @use "style/variables.scss" as *;
 
-@mixin flex-center {
+@mixin flex-center-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
