@@ -1,6 +1,6 @@
-@use "style/variables.scss" as *;
-@use "@picocss/pico/scss/pico" with (
-  $theme-color: "slate"
+@use 'style/variables.scss' as *;
+@use '@picocss/pico/scss/pico' with (
+  $theme-color: 'slate'
 );
 
 body {

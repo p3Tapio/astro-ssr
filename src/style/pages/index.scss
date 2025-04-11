@@ -1,4 +1,4 @@
-@use "style/mixins.scss" as *;
+@use 'style/mixins.scss' as *;
 
 .container {
   @include flex-center-center;

@@ -1,11 +1,15 @@
 ---
-import Layout from "layouts/Layout.astro";
-import "./index.scss";
-
+import Layout from 'layouts/Layout.astro';
+import './index.scss';
 ---
 
 <Layout>
+  <div set:text="test" />
   <article class="container">
     <h1>User</h1>
+    <style>
+      .unused-class {
+      }
+    </style>
   </article>
 </Layout>

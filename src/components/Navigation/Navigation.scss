@@ -1,4 +1,4 @@
-@use "style/variables.scss" as *;
+@use 'style/variables.scss' as *;
 
 .nav {
   padding: 0 $spacing-small;
@@ -30,14 +30,14 @@
     }
 
     &::after {
-      content: "|";
+      content: '|';
       color: var(--pico-primary);
       margin-left: $spacing-small;
       font-weight: 500;
     }
 
     &:last-of-type::after {
-      content: "";
+      content: '';
     }
 
     &.active a {
