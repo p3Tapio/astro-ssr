@@ -7,14 +7,16 @@ on:
     types: [opened, synchronize, reopened]
 
 jobs:
-  lint-and-typecheck:
+  lint-and-test-build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
       - name: Install dependencies
         run: npm install
       - name: Run lint and typecheck
         run: npm run check
+      - name: Build
+        run: npm run build && npm run preview
