@@ -14,5 +14,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
+      - name: Install dependencies
+        run: npm install
       - name: Run lint and typecheck
         run: npm run check
