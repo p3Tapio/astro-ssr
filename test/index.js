@@ -16,10 +16,30 @@ setTimeout(async () => {
     });
 
     const requiredNavItems = ['Home', 'Register', 'Sign in'];
-    const areEqual = requiredNavItems.every((item) => navItems.includes(item));
+    const navIsEqual = requiredNavItems.every((item) =>
+      navItems.includes(item)
+    );
 
-    if (!areEqual) {
+    if (!navIsEqual) {
       throw new Error('Required navigation items missing');
+    }
+
+    let header = await page.evaluate(() => {
+      return document.querySelector('h1').innerText;
+    });
+
+    if (header !== 'Hello World') {
+      throw new Error('Header is not correct');
+    }
+
+    await page.click('text=Register');
+
+    header = await page.evaluate(() => {
+      return document.querySelector('h1').innerText;
+    });
+
+    if (header !== 'Auth') {
+      throw new Error('Navigation not working');
     }
 
     console.log('All good 👍');
