@@ -1,7 +1,10 @@
 import puppeteer from 'puppeteer';
 
 setTimeout(async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
 
   try {
     const page = await browser.newPage();
