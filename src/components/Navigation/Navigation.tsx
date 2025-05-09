@@ -16,7 +16,7 @@ export default function Navigation({ currentPage }: NavigationProps) {
         <div className={`nav__item ${currentPage === '/' ? 'active' : ''}`}>
           <a href="/">Home</a>
         </div>
-        {!isAuthenticated ? (
+        {isAuthenticated ? (
           <>
             <div
               className={`nav__item ${currentPage === '/user' ? 'active' : ''}`}
